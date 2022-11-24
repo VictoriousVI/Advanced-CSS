@@ -1,0 +1,309 @@
+/* SCSS partial imports */ /* Shapes */
+/* Texts */
+/* Social Media Buttons */
+/* Grid Proportions */
+/* Desktop */
+/* Tablet */
+/* Mobile */
+/* Positioning */
+/* Flex */
+/* Grid Responsive */
+/* Shapes & Shadows */
+/* Animations & Transitions */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.fa-laptop-code::before {
+  content: "\f5fc";
+  color: #fff;
+}
+
+.fa-twitter::before {
+  content: "\f099";
+  color: #fff;
+}
+
+.fa-linkedin-in::before {
+  content: "\f0e1";
+  color: #fff;
+}
+
+.fa-facebook-f::before {
+  content: "\f39e";
+  color: #fff;
+}
+
+.fa-github::before {
+  content: "\f09b";
+  color: #fff;
+}
+
+/* google font import */
+/* Main SCSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c3cfe2;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Part 1 */
+.part1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.testimonial-container {
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.25);
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+}
+.testimonial-container .testimonial {
+  border-radius: 20px 20px 0px 0px;
+  -webkit-border-radius: 20px 20px 0px 0px;
+  -moz-border-radius: 20px 20px 0px 0px;
+  width: 400px;
+  height: 336px;
+  padding: 50px 40px 0 40px;
+  background-color: #fff;
+}
+.testimonial-container .testimonial p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666666;
+  line-height: 35px;
+  letter-spacing: 1px;
+}
+.testimonial-container .footer-profile {
+  border-radius: 0px 0px 20px 20px;
+  -webkit-border-radius: 0px 0px 20px 20px;
+  -moz-border-radius: 0px 0px 20px 20px;
+  width: 400px;
+  height: 164px;
+  padding-top: 70px;
+  background: #686de0;
+}
+.testimonial-container .footer-profile h1 {
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.testimonial-container .footer-profile p {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #b3b6eb;
+}
+.testimonial-container img {
+  width: 120px;
+  border: 5px solid #fff;
+  border-radius: 100%;
+  position: relative;
+  left: 140px;
+  bottom: 224px;
+}
+
+/* Part 2 */
+.part2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portfolio-grid {
+  width: 82vw;
+  display: grid;
+  grid-template-rows: 24vw 24vw 24vw;
+  grid-template-columns: 24vw 24vw 24vw;
+  gap: 5vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+.portfolio-grid div {
+  background: #232c3d;
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  grid-template-rows: 1fr 20px 1fr;
+  border-radius: 1vw;
+}
+.portfolio-grid div button {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.portfolio-grid div img {
+  opacity: 100%;
+  transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  width: 24vw;
+  position: absolute;
+  border-radius: 1vw;
+}
+.portfolio-grid div img:hover {
+  opacity: 0%;
+  transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -webkit-transition: opacity 0.4s ease-in-out;
+}
+
+/* Part 3 */
+.part3 {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  right: -150px;
+  bottom: 50px;
+}
+.part3 div {
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  width: 200px;
+  height: 40px;
+  padding-top: 12px;
+}
+.part3 div:hover {
+  transform: translate(-150px, 0);
+}
+.part3 a {
+  font-size: 14px;
+  color: #fff;
+}
+.part3 .blog-button {
+  background-color: #e17b77;
+  padding-left: 15px;
+}
+.part3 .blog-button i {
+  margin-right: 15px;
+}
+.part3 .facebook-button {
+  background-color: #3b5998;
+  padding-left: 20px;
+}
+.part3 .facebook-button i {
+  margin-right: 20px;
+}
+.part3 .twitter-button {
+  background-color: #00aced;
+  padding-left: 17px;
+}
+.part3 .twitter-button i {
+  margin-right: 17px;
+}
+.part3 .github-button {
+  background-color: #333;
+  padding-left: 17.25px;
+}
+.part3 .github-button i {
+  margin-right: 17.25px;
+}
+.part3 .linkedin-button {
+  background-color: #007bb6;
+  padding-left: 18px;
+}
+.part3 .linkedin-button i {
+  margin-right: 18px;
+}
+
+/* Media Queries */
+/* Tablet */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    width: 80vw;
+    grid-template-rows: 37.5vw 37.5vw 37.5vw 37.5vw;
+    grid-template-columns: 37.5vw 37.5vw;
+    gap: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .portfolio-grid div img {
+    width: 37.5vw;
+  }
+}
+/* mobile */
+@media (max-width: 640px) {
+  .portfolio-grid {
+    width: 70vw;
+    grid-template-rows: 70vw 70vw 70vw 70vw 70vw 70vw 70vw;
+    grid-template-columns: 70vw;
+    gap: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+  .portfolio-grid div img {
+    width: 70vw;
+  }
+}/*# sourceMappingURL=styles.css.map */

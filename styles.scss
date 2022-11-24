@@ -1,0 +1,205 @@
+/* SCSS partial imports */
+
+@import "colors";
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "fontawsome";
+
+
+/* google font import */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+/* Main SCSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+body {
+    background-color: $color-page-background;
+    font-family: 'Roboto', sans-serif;
+}
+main {
+    @include flex-center;
+}
+
+
+/* Part 1 */
+
+.part1 {
+    @include flex-center;
+    height: 100vh;
+}
+.testimonial-container {
+    @include testimonial-shadow;
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    .testimonial {
+        @include border-radius-top;
+        width: 400px;
+        height: 336px;
+        padding: 50px 40px 0 40px;
+        background-color: $color-text-background;
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            color: $color-testimonial-text;
+            line-height: 35px;
+            letter-spacing: 1px;
+        }
+    }
+    .footer-profile {
+        @include border-radius-bottom;
+        width: 400px;
+        height: 164px;
+        padding-top: 70px;
+        background: $color-footer;
+        h1 {
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $color-white-text;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: $color-footer-text;
+        }
+    }
+    img {
+        width: 120px;
+        border: 5px solid $color-text-background;
+        border-radius: 100%;
+        position: relative;
+        left: 140px;
+        bottom: 224px;
+    }
+}
+
+
+/* Part 2 */
+
+.part2 {
+    @include flex-center;
+}
+.portfolio-grid {
+    @include grid-d;
+    div {
+        background: $color-grid;
+        display: grid;
+        grid-template-columns: 1fr 90px 1fr;
+        grid-template-rows: 1fr 20px 1fr;
+        border-radius: 1vw;
+        button {
+            grid-row: 2 / 3;
+            grid-column: 2 / 3;
+        }
+        img {
+            @include fade-in;
+            width: $grid-area-d;
+            position: absolute;
+            border-radius: 1vw;
+            &:hover {
+                @include fade-out;
+            }
+        }        
+    }
+}
+
+
+/* Part 3 */
+
+.part3 {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    right: -150px;
+    bottom: 50px;
+    div {
+        @include translate-in-out;
+        width: 200px;
+        height: 40px;
+        padding-top: 12px;
+        &:hover {
+            transform: translate(-150px, 0);
+        }
+    }
+    a {
+        font-size: 14px;
+        color: $color-white-text;
+    }
+    .blog-button {
+        background-color: $color-blog;
+        padding-left: 15px;
+        i {
+            margin-right: 15px;
+        }
+    }
+    .facebook-button {
+        background-color: $color-facebook;
+        padding-left: 20px;
+        i {
+            margin-right: 20px;
+        }
+    }
+    .twitter-button {
+        background-color: $color-twitter;
+        padding-left: 17px;
+        i {
+            margin-right: 17px;
+        }
+    }
+    .github-button {
+        background-color: $color-github;
+        padding-left: 17.25px;
+        i {
+            margin-right: 17.25px;
+        }
+    }
+    .linkedin-button {
+        background-color: $color-linkedin;
+        padding-left: 18px;
+        i {
+            margin-right: 18px;
+        }
+    }
+}
+
+
+/* Media Queries */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        @include grid-t;
+        div {
+            img {
+                width: $grid-area-t;
+            }        
+        }
+        
+    }
+}
+
+/* mobile */
+
+@media (max-width: 640px) {
+    .portfolio-grid {
+        @include grid-m;
+        div {
+            img {
+                width: $grid-area-m;
+            }        
+        }
+        
+    }
+}
